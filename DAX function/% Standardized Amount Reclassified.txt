@@ -1,0 +1,27 @@
+% Standardized Amount Reclassified = 
+VAR TotalProviders =
+    COUNTROWS ( provider_specific_file )
+
+VAR StdAmtReclassified =
+    CALCULATE (
+        COUNTROWS ( provider_specific_file ),
+        FILTER (
+            provider_specific_file,
+            
+            -- MSA Standardized Amount mismatch
+            (
+                NOT ISBLANK ( provider_specific_file[msaStandardizedAmountLocation] )
+                && NOT ISBLANK ( provider_specific_file[msaActualGeographicLocation] )
+                && provider_specific_file[msaStandardizedAmountLocation] <> provider_specific_file[msaActualGeographicLocation]
+            )
+            ||
+            -- CBSA Standardized Amount mismatch
+            (
+                NOT ISBLANK ( provider_specific_file[cbsaStandardizedAmountLocation] )
+                && NOT ISBLANK ( provider_specific_file[cbsaActualGeographicLocation] )
+                && provider_specific_file[cbsaStandardizedAmountLocation] <> provider_specific_file[cbsaActualGeographicLocation]
+            )
+        )
+    )
+
+RETURN

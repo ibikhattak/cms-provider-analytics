@@ -1,0 +1,28 @@
+﻿Facility Type ,Abbreviation,Provider Type 
+Inpatient (Acute Care),INP ,00
+Inpatient (Acute Care),INP ,01
+Inpatient (Acute Care),INP ,07
+Inpatient (Acute Care),INP ,08
+Inpatient (Acute Care),INP ,09
+Inpatient (Acute Care),INP ,10
+Inpatient (Acute Care),INP ,11
+Inpatient (Acute Care),INP ,13
+Inpatient (Acute Care),INP ,14
+Inpatient (Acute Care),INP ,15
+Inpatient (Acute Care),INP ,16
+Inpatient (Acute Care),INP ,17
+Inpatient (Acute Care),INP ,18
+Inpatient (Acute Care),INP ,21
+Inpatient (Acute Care),INP ,22
+Skilled Nursing Facility ,SNF,38
+Skilled Nursing Facility ,SNF,51
+Skilled Nursing Facility ,SNF,52
+Skilled Nursing Facility ,SNF,53
+Inpatient Psychiatric Facility,IPF,03
+Inpatient Psychiatric Facility,IPF,49
+Home Health Agency ,HHA,36
+Hospice ,HOS,35
+Inpatient Rehabilitation Facility ,IRF,04
+Inpatient Rehabilitation Facility ,IRF,06
+Inpatient Rehabilitation Facility ,IRF,50
+Long-Term Care Hospital ,LTCH,02

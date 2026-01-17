@@ -1,0 +1,28 @@
+﻿Facility Type ,Abbreviation,Provider Type ,Color Map
+Inpatient (Acute Care),INP,00,#F7EF04
+Inpatient (Acute Care),INP,01,#F7EF04
+Inpatient (Acute Care),INP,07,#F7EF04
+Inpatient (Acute Care),INP,08,#F7EF04
+Inpatient (Acute Care),INP,09,#F7EF04
+Inpatient (Acute Care),INP,10,#F7EF04
+Inpatient (Acute Care),INP,11,#F7EF04
+Inpatient (Acute Care),INP,13,#F7EF04
+Inpatient (Acute Care),INP,14,#F7EF04
+Inpatient (Acute Care),INP,15,#F7EF04
+Inpatient (Acute Care),INP,16,#F7EF04
+Inpatient (Acute Care),INP,17,#F7EF04
+Inpatient (Acute Care),INP,18,#F7EF04
+Inpatient (Acute Care),INP,21,#F7EF04
+Inpatient (Acute Care),INP,22,#F7EF04
+Skilled Nursing Facility,SNF,38,#0ACBFB
+Skilled Nursing Facility,SNF,51,#0ACBFB
+Skilled Nursing Facility,SNF,52,#0ACBFB
+Skilled Nursing Facility,SNF,53,#0ACBFB
+Inpatient Psychiatric Facility,IPF,03,#72F452
+Inpatient Psychiatric Facility,IPF,49,#72F452
+Home Health Agency,HHA,36,#6876FA
+Hospice,HOS,35,#A45FF9
+Inpatient Rehabilitation Facility,IRF,04,#F95ECB
+Inpatient Rehabilitation Facility,IRF,06,#F95ECB
+Inpatient Rehabilitation Facility,IRF,50,#F95ECB
+Long-Term Care Hospital,LTCH,02,#DF1616

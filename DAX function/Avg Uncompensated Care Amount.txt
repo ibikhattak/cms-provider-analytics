@@ -1,0 +1,2 @@
+Avg Uncompensated Care Amount = 
+AVERAGE(provider_specific_file[uncompensatedCareAmount])

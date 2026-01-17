@@ -1,0 +1,2 @@
+Avg Medicaid Ratio = 
+AVERAGE(provider_specific_file[medicaidRatio])

@@ -1,0 +1,30 @@
+% Wage Index Reclassified = 
+VAR TotalProviders =
+    COUNTROWS ( provider_specific_file )
+
+VAR WageIndexReclassified =
+    CALCULATE (
+        COUNTROWS ( provider_specific_file ),
+        FILTER (
+            provider_specific_file,
+            -- Wage index MSA mismatch
+            (
+                NOT ISBLANK ( provider_specific_file[msaWageIndexLocation] )
+                && NOT ISBLANK ( provider_specific_file[msaActualGeographicLocation] )
+                && provider_specific_file[msaWageIndexLocation] <> provider_specific_file[msaActualGeographicLocation]
+            )
+            ||
+            -- Wage index CBSA mismatch
+            (
+                NOT ISBLANK ( provider_specific_file[cbsaWageIndexLocation] )
+                && NOT ISBLANK ( provider_specific_file[cbsaActualGeographicLocation] )
+                && provider_specific_file[cbsaWageIndexLocation] <> provider_specific_file[cbsaActualGeographicLocation]
+            )
+            ||
+            -- Explicit wage index reclass flag
+            provider_specific_file[changeCodeWageIndexReclassification] = "Y"
+        )
+    )
+
+RETURN
+    DIVIDE ( WageIndexReclassified, TotalProviders )

@@ -1,0 +1,18 @@
+Wage Index Reclassified Count = 
+CALCULATE(
+    COUNTROWS(provider_specific_file),
+    FILTER(
+        provider_specific_file,
+        (
+            NOT ISBLANK(provider_specific_file[msaWageIndexLocation])
+            && provider_specific_file[msaWageIndexLocation] <> provider_specific_file[msaActualGeographicLocation]
+        )
+        ||
+        (
+            NOT ISBLANK(provider_specific_file[cbsaWageIndexLocation])
+            && provider_specific_file[cbsaWageIndexLocation] <> provider_specific_file[cbsaActualGeographicLocation]
+        )
+        ||
+        provider_specific_file[changeCodeWageIndexReclassification] = "Y"
+    )
+)

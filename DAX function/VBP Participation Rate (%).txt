@@ -1,0 +1,5 @@
+VBP Participation Rate (%) = 
+DIVIDE(
+    CALCULATE(COUNTROWS(provider_specific_file), provider_specific_file[vbpParticipantIndicator] = "Y"),
+    CALCULATE(COUNTROWS(provider_specific_file), provider_specific_file[vbpParticipantIndicator] IN {"Y", "N"})
+)

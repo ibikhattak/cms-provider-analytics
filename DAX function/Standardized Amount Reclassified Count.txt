@@ -1,0 +1,16 @@
+Standardized Amount Reclassified Count = 
+CALCULATE(
+    COUNTROWS(provider_specific_file),
+    FILTER(
+        provider_specific_file,
+        (
+            NOT ISBLANK(provider_specific_file[msaStandardizedAmountLocation])
+            && provider_specific_file[msaStandardizedAmountLocation] <> provider_specific_file[msaActualGeographicLocation]
+        )
+        ||
+        (
+            NOT ISBLANK(provider_specific_file[cbsaStandardizedAmountLocation])
+            && provider_specific_file[cbsaStandardizedAmountLocation] <> provider_specific_file[cbsaActualGeographicLocation]
+        )
+    )
+)

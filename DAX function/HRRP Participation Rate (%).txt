@@ -1,0 +1,5 @@
+HRRP Participation Rate (%) = 
+DIVIDE(
+    CALCULATE(COUNTROWS(provider_specific_file), provider_specific_file[hrrParticipantIndicator] = "1"),
+    CALCULATE(COUNTROWS(provider_specific_file), provider_specific_file[hrrParticipantIndicator] IN {"0", "1"})
+)

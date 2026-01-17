@@ -1,0 +1,28 @@
+% Providers Reclassified = 
+VAR TotalProviders =
+    COUNTROWS(provider_specific_file)
+
+VAR ReclassifiedProviders =
+    CALCULATE(
+        COUNTROWS(provider_specific_file),
+        
+        // Wage Index Reclassification
+        provider_specific_file[changeCodeWageIndexReclassification] = "Y"
+            ||
+        provider_specific_file[msaWageIndexLocation] <> provider_specific_file[msaActualGeographicLocation]
+            ||
+        provider_specific_file[cbsaWageIndexLocation] <> provider_specific_file[cbsaActualGeographicLocation]
+            ||
+        
+        // Standardized Amount Reclassification
+        provider_specific_file[msaStandardizedAmountLocation] <> provider_specific_file[msaActualGeographicLocation]
+            ||
+        provider_specific_file[cbsaStandardizedAmountLocation] <> provider_specific_file[cbsaActualGeographicLocation]
+            ||
+        
+        // Lugar Reclassification (ONLY "L")
+        provider_specific_file[changeCodeForLugarReclassification] = "L"
+    )
+
+RETURN
+    DIVIDE(ReclassifiedProviders, TotalProviders)

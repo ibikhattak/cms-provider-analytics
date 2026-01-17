@@ -1,0 +1,5 @@
+Actual Location Count = 
+CALCULATE(
+    COUNTROWS(provider_specific_file),
+    NOT ISBLANK(provider_specific_file[msaActualGeographicLocation])
+)

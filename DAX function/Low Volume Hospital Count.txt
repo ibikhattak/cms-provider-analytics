@@ -1,0 +1,5 @@
+Low Volume Hospital Count = 
+CALCULATE(
+    COUNTROWS(provider_specific_file),
+    provider_specific_file[lowVolumeAdjustmentFactor] > 0
+)

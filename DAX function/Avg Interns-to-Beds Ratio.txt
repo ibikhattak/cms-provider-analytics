@@ -1,0 +1,2 @@
+Avg Interns-to-Beds Ratio = 
+AVERAGE(provider_specific_file[internsToBedsRatio])

@@ -1,0 +1,2 @@
+Avg Operating Cost-to-Charge Ratio = 
+AVERAGE(provider_specific_file[operatingCostToChargeRatio])
